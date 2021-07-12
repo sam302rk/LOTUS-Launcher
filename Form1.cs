@@ -19,7 +19,7 @@ namespace LOTUS_Launcher
 
         private void bit64_Click(object sender, EventArgs e) // x86
         {
-            if (MessageBox.Show("Attention:\nThe x86 version of LOTUS is only intended for x86 computers or for use with joysticks/gamepads,\because it can lead to gigantic performance losses.\n\nWill you continue?", 
+            if (MessageBox.Show("The x86 is not recommended. Proceeding may result in worse performance.\n\nWill you continue?", 
                 "LOTUS-Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) open("32");
         }
 
