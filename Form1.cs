@@ -34,6 +34,11 @@ namespace LOTUS_Launcher
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Text = Properties.Resources.ResourceManager.GetString("Name");
+            bit64.Text = Properties.Resources.ResourceManager.GetString("RunLOTUS").Replace("%", "86");
+            bit32.Text = Properties.Resources.ResourceManager.GetString("RunLOTUS").Replace("%", "64");
+            label1.Text = Properties.Resources.ResourceManager.GetString("StartQuestion");
+
             if (!Directory.Exists("LAUNCHER"))
             {
                 bit64.Enabled = false;
