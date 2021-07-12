@@ -19,8 +19,8 @@ namespace LOTUS_Launcher
 
         private void bit64_Click(object sender, EventArgs e) // x86
         {
-            if (MessageBox.Show("The x86 is not recommended. Proceeding may result in worse performance.\n\nWill you continue?", 
-                "LOTUS-Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) open("32");
+            if (MessageBox.Show(Properties.Resources.ResourceManager.GetString("x86Question"),
+                Properties.Resources.ResourceManager.GetString("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) open("32");
         }
 
         private void open(string type)
