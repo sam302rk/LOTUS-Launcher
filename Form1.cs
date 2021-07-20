@@ -22,15 +22,15 @@ namespace LOTUS_Launcher
             }
         }
 
-        private void bit32_Click(object sender, EventArgs e) // x64
+        private void Bit32_Click(object sender, EventArgs e) // x64
         {
             Open("64");
         }
 
-        private void bit64_Click(object sender, EventArgs e) // x86
+        private void Bit64_Click(object sender, EventArgs e) // x86
         {
-            if (MessageBox.Show(getTranslation("x86Question").Replace("!!", "\n"),
-                getTranslation("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) Open("32");
+            if (MessageBox.Show(GetTranslation("x86Question").Replace("!!", "\n"),
+                GetTranslation("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) Open("32");
         }
 
         private void Open(string type)
@@ -56,9 +56,9 @@ namespace LOTUS_Launcher
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = Properties.Resources.ResourceManager.GetString("Name");
-            bit64.Text = getTranslation("RunLOTUS").Replace("%", "86");
-            bit32.Text = getTranslation("RunLOTUS").Replace("%", "64");
-            label1.Text = getTranslation("StartQuestion");
+            bit64.Text = GetTranslation("RunLOTUS").Replace("%", "86");
+            bit32.Text = GetTranslation("RunLOTUS").Replace("%", "64");
+            label1.Text = GetTranslation("StartQuestion");
 
             if (!Directory.Exists("LAUNCHER"))
             {
@@ -68,10 +68,9 @@ namespace LOTUS_Launcher
             }
         }
 
-        private string getTranslation(string key)
+        private static string GetTranslation(string key)
         {
-            if (CultureInfo.CurrentCulture.Name.Equals("de-DE")) return Properties.Resources_German.ResourceManager.GetString(key);
-            return Properties.Resources.ResourceManager.GetString(key);
+            return CultureInfo.CurrentCulture.Name.Equals("de-DE") ? Properties.Resources_German.ResourceManager.GetString(key) : Properties.Resources.ResourceManager.GetString(key);
         }
 
         private void button1_Click(object sender, EventArgs e)

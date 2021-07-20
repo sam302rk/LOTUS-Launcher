@@ -47,7 +47,7 @@
             this.bit64.TabIndex = 0;
             this.bit64.Text = "Run x86 LOTUS";
             this.bit64.UseVisualStyleBackColor = true;
-            this.bit64.Click += new System.EventHandler(this.bit64_Click);
+            this.bit64.Click += new System.EventHandler(this.Bit64_Click);
             // 
             // bit32
             // 
@@ -59,7 +59,7 @@
             this.bit32.TabIndex = 1;
             this.bit32.Text = "Run x64 LOTUS";
             this.bit32.UseVisualStyleBackColor = true;
-            this.bit32.Click += new System.EventHandler(this.bit32_Click);
+            this.bit32.Click += new System.EventHandler(this.Bit32_Click);
             // 
             // label1
             // 
