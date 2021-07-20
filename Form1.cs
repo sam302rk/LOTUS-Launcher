@@ -18,7 +18,7 @@ namespace LOTUS_Launcher
             if (File.Exists("LAUNCHER/THEME"))
             {
                 DarkMode = File.ReadAllText("LAUNCHER/THEME").Equals("True");
-                button3_Click(null, null);
+                Button3_Click(null, null);
             }
         }
 
@@ -73,17 +73,17 @@ namespace LOTUS_Launcher
             return CultureInfo.CurrentCulture.Name.Equals("de-DE") ? Properties.Resources_German.ResourceManager.GetString(key) : Properties.Resources.ResourceManager.GetString(key);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             StartSteamApp(870500, true);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             StartSteamApp(870490, true);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             DarkMode = !DarkMode;
             button3.BackgroundImage = DarkMode ? Properties.Resources.LightMode : Properties.Resources.DarkMode;

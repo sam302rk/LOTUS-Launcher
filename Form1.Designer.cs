@@ -81,7 +81,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Map Editor";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -92,7 +92,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Content Tool";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -106,7 +106,7 @@
             this.button3.Size = new System.Drawing.Size(32, 32);
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Form1
             // 
