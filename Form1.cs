@@ -56,5 +56,15 @@ namespace LOTUS_Launcher
             if (CultureInfo.CurrentCulture.Name.Equals("de-DE")) return Properties.Resources_German.ResourceManager.GetString(key);
             return Properties.Resources.ResourceManager.GetString(key);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("steam://rungameid/870500");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start("steam://rungameid/870490");
+        }
     }
 }
