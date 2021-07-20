@@ -23,21 +23,21 @@ namespace LOTUS_Launcher
 
         private void bit32_Click(object sender, EventArgs e) // x64
         {
-            open("64");
+            Open("64");
         }
 
         private void bit64_Click(object sender, EventArgs e) // x86
         {
             if (MessageBox.Show(getTranslation("x86Question").Replace("!!", "\n"),
-                getTranslation("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) open("32");
+                getTranslation("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) Open("32");
         }
 
-        private void open(string type)
+        private void Open(string type)
         {
             if (!Directory.Exists("LAUNCHER")) return;
             File.Delete("LOTUS.exe");
             File.Copy("LAUNCHER/LOTUS-" + type + ".exe", "LOTUS.exe");
-            Process.Start("steam://rungameid/370350");
+            StartSteamApp(370350, false);
 
             Hide();
 
@@ -72,16 +72,12 @@ namespace LOTUS_Launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("steam://rungameid/870500");
-
-            Application.Exit();
+            StartSteamApp(870500, true);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process.Start("steam://rungameid/870490");
-
-            Application.Exit();
+            StartSteamApp(870490, true);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -93,6 +89,12 @@ namespace LOTUS_Launcher
             ForeColor = DarkMode ? SystemColors.Control : SystemColors.ControlText;
 
             File.WriteAllText("LAUNCHER/THEME", DarkMode + "");
+        }
+
+        private static void StartSteamApp(int gameId, bool exit)
+        {
+            Process.Start("steam://rungameid/" + gameId);
+            if(exit) Application.Exit();
         }
     }
 }
