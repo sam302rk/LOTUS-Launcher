@@ -61,15 +61,6 @@ namespace LOTUS_Launcher.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die LOTUS-Launcher ähnelt.
-        /// </summary>
-        internal static string Name {
-            get {
-                return ResourceManager.GetString("Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die x% Version von LOTUS starten ähnelt.
         /// </summary>
         internal static string RunLOTUS {
