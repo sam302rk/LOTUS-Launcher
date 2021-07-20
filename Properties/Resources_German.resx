@@ -127,6 +127,6 @@
     <value>Möchtest du die x64 oder x86 Version von LOTUS öffnen?</value>
   </data>
   <data name="x86Question" xml:space="preserve">
-    <value>Die x86 wird nicht empfohlen. Das Fortfahren kann zu einer schlechteren Leistung führen.\n\nMöchten Sie fortfahren?</value>
+    <value>Die x86 wird nicht empfohlen. Das Fortfahren kann zu einer schlechteren Leistung führen. !!!!Möchten Sie fortfahren?</value>
   </data>
 </root>

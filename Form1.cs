@@ -20,7 +20,7 @@ namespace LOTUS_Launcher
 
         private void bit64_Click(object sender, EventArgs e) // x86
         {
-            if (MessageBox.Show(getTranslation("x86Question"),
+            if (MessageBox.Show(getTranslation("x86Question").Replace("!!", "\n"),
                 getTranslation("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) open("32");
         }
 
@@ -65,11 +65,15 @@ namespace LOTUS_Launcher
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start("steam://rungameid/870500");
+
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Process.Start("steam://rungameid/870490");
+
+            Application.Exit();
         }
     }
 }

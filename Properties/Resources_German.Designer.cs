@@ -88,7 +88,7 @@ namespace LOTUS_Launcher.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die x86 wird nicht empfohlen. Das Fortfahren kann zu einer schlechteren Leistung führen.\n\nMöchten Sie fortfahren? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Die x86 wird nicht empfohlen. Das Fortfahren kann zu einer schlechteren Leistung führen. !!!!Möchten Sie fortfahren? ähnelt.
         /// </summary>
         internal static string x86Question {
             get {
