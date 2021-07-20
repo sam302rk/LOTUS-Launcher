@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LOTUS_Launcher
@@ -41,12 +42,15 @@ namespace LOTUS_Launcher
 
             Hide();
 
-            while (Process.GetProcessesByName("LOTUS").Length == 0) ;
-            while (Process.GetProcessesByName("LOTUS").Length > 0) ;
-            
-            File.Delete("LOTUS.exe");
-            File.Copy("LAUNCHER/LOTUS-64.exe", "LOTUS.exe");
-            Application.Exit();
+            new Task(() =>
+            {
+                while (Process.GetProcessesByName("LOTUS").Length == 0) ;
+                while (Process.GetProcessesByName("LOTUS").Length > 0) ;
+
+                File.Delete("LOTUS.exe");
+                File.Copy("LAUNCHER/LOTUS-64.exe", "LOTUS.exe");
+                Application.Exit();
+            }).Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
