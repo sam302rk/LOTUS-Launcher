@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +19,7 @@ namespace LOTUS_Launcher
             if (File.Exists("LAUNCHER/THEME"))
             {
                 DarkMode = File.ReadAllText("LAUNCHER/THEME").Equals("True");
-                Button3_Click(null, null);
+                UpdateTheme();
             }
         }
 
@@ -86,6 +87,11 @@ namespace LOTUS_Launcher
         private void Button3_Click(object sender, EventArgs e)
         {
             DarkMode = !DarkMode;
+            UpdateTheme();
+        }
+
+        private void UpdateTheme()
+        {
             button3.BackgroundImage = DarkMode ? Properties.Resources.LightMode : Properties.Resources.DarkMode;
 
             BackColor = DarkMode ? Color.FromArgb(30, 30, 30) : SystemColors.Control;
