@@ -38,6 +38,7 @@
             // 
             // bit64
             // 
+            this.bit64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bit64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bit64.Location = new System.Drawing.Point(12, 146);
             this.bit64.Name = "bit64";
@@ -49,6 +50,7 @@
             // 
             // bit32
             // 
+            this.bit32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bit32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bit32.Location = new System.Drawing.Point(12, 98);
             this.bit32.Name = "bit32";
@@ -60,6 +62,7 @@
             // 
             // label1
             // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
@@ -70,6 +73,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(12, 194);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 29);
@@ -80,6 +84,7 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(232, 194);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 29);
