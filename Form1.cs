@@ -30,6 +30,14 @@ namespace LOTUS_Launcher
             File.Delete("LOTUS.exe");
             File.Copy("LAUNCHER/LOTUS-" + type + ".exe", "LOTUS.exe");
             Process.Start("steam://rungameid/370350");
+
+            Hide();
+
+            while (Process.GetProcessesByName("LOTUS").Length == 0) ;
+            while (Process.GetProcessesByName("LOTUS").Length > 0) ;
+            
+            File.Delete("LOTUS.exe");
+            File.Copy("LAUNCHER/LOTUS-64.exe", "LOTUS.exe");
             Application.Exit();
         }
 
@@ -45,8 +53,8 @@ namespace LOTUS_Launcher
                 bit64.Enabled = false;
                 bit32.Enabled = false;
                 Directory.CreateDirectory("LAUNCHER");
-                File.Move("LOTUS.exe", "LAUNCHER/LOTUS-64.exe");
-                File.Move("LOTUS_32.exe", "LAUNCHER/LOTUS-32.exe");
+                File.Copy("LOTUS.exe", "LAUNCHER/LOTUS-64.exe");
+                File.Copy("LOTUS_32.exe", "LAUNCHER/LOTUS-32.exe");
                 Application.Exit();
             }
         }
