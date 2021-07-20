@@ -50,12 +50,9 @@ namespace LOTUS_Launcher
 
             if (!Directory.Exists("LAUNCHER"))
             {
-                bit64.Enabled = false;
-                bit32.Enabled = false;
                 Directory.CreateDirectory("LAUNCHER");
                 File.Copy("LOTUS.exe", "LAUNCHER/LOTUS-64.exe");
                 File.Copy("LOTUS_32.exe", "LAUNCHER/LOTUS-32.exe");
-                Application.Exit();
             }
         }
 
