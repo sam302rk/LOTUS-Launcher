@@ -23,12 +23,12 @@ namespace LOTUS_Launcher
             }
         }
 
-        private void Bit32_Click(object sender, EventArgs e) // x64
+        private void BitX64_Click(object sender, EventArgs e)
         {
             Open("64");
         }
 
-        private void Bit64_Click(object sender, EventArgs e) // x86
+        private void BitX86_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(GetTranslation("x86Question").Replace("!!", "\n"),
                 GetTranslation("Name"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Yes) Open("32");
@@ -57,8 +57,8 @@ namespace LOTUS_Launcher
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = Properties.Resources.ResourceManager.GetString("Name");
-            bit64.Text = GetTranslation("RunLOTUS").Replace("%", "86");
-            bit32.Text = GetTranslation("RunLOTUS").Replace("%", "64");
+            bitX86.Text = GetTranslation("RunLOTUS").Replace("%", "86");
+            bitX64.Text = GetTranslation("RunLOTUS").Replace("%", "64");
             label1.Text = GetTranslation("StartQuestion");
 
             if (!Directory.Exists("LAUNCHER"))
