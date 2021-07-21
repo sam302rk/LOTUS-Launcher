@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.bit64 = new System.Windows.Forms.Button();
-            this.bit32 = new System.Windows.Forms.Button();
+            this.bitX86 = new System.Windows.Forms.Button();
+            this.bitX64 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // bit64
+            // bitX86
             // 
-            this.bit64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bit64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bit64.Location = new System.Drawing.Point(12, 146);
-            this.bit64.Name = "bit64";
-            this.bit64.Size = new System.Drawing.Size(434, 42);
-            this.bit64.TabIndex = 0;
-            this.bit64.Text = "Run x86 LOTUS";
-            this.bit64.UseVisualStyleBackColor = true;
-            this.bit64.Click += new System.EventHandler(this.Bit64_Click);
+            this.bitX86.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bitX86.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitX86.Location = new System.Drawing.Point(12, 146);
+            this.bitX86.Name = "bitX86";
+            this.bitX86.Size = new System.Drawing.Size(434, 42);
+            this.bitX86.TabIndex = 0;
+            this.bitX86.Text = "Run x86 LOTUS";
+            this.bitX86.UseVisualStyleBackColor = true;
+            this.bitX86.Click += new System.EventHandler(this.BitX86_Click);
             // 
-            // bit32
+            // bitX64
             // 
-            this.bit32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bit32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bit32.Location = new System.Drawing.Point(12, 98);
-            this.bit32.Name = "bit32";
-            this.bit32.Size = new System.Drawing.Size(434, 42);
-            this.bit32.TabIndex = 1;
-            this.bit32.Text = "Run x64 LOTUS";
-            this.bit32.UseVisualStyleBackColor = true;
-            this.bit32.Click += new System.EventHandler(this.Bit32_Click);
+            this.bitX64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bitX64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitX64.Location = new System.Drawing.Point(12, 98);
+            this.bitX64.Name = "bitX64";
+            this.bitX64.Size = new System.Drawing.Size(434, 42);
+            this.bitX64.TabIndex = 1;
+            this.bitX64.Text = "Run x64 LOTUS";
+            this.bitX64.UseVisualStyleBackColor = true;
+            this.bitX64.Click += new System.EventHandler(this.BitX64_Click);
             // 
             // label1
             // 
@@ -117,8 +117,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bit32);
-            this.Controls.Add(this.bit64);
+            this.Controls.Add(this.bitX64);
+            this.Controls.Add(this.bitX86);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -132,8 +132,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button bit64;
-        private System.Windows.Forms.Button bit32;
+        private System.Windows.Forms.Button bitX86;
+        private System.Windows.Forms.Button bitX64;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
